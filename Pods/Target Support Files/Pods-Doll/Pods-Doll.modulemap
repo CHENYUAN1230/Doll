@@ -1,0 +1,6 @@
+framework module Pods_Doll {
+  umbrella header "Pods-Doll-umbrella.h"
+
+  export *
+  module * { export * }
+}
