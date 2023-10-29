@@ -32,6 +32,6 @@ class record: Object{
     @objc dynamic var score = ""
     @objc dynamic var wrongAnswer = ""
     @objc dynamic var time = ""
-}//修改資料庫
+}//修改
 
 
