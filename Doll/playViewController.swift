@@ -16,6 +16,9 @@ var str2: String = ""
 //var random = [String]()
 
 typealias question = Int
+var wrongAnswerList : [String] = []//紀錄錯誤的題目
+var finalScore = 100
+
 
 class playViewController: UIViewController {
     var simpleBluetoothIO: SimpleBluetoothIO!
@@ -36,9 +39,12 @@ class playViewController: UIViewController {
     var data = [elderlyInfo]()
     
     var displayedData = [elderlyInfo]()
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var pressnumber = 0
+    var correctOrNot = true//答對才可以下一題
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +57,19 @@ class playViewController: UIViewController {
         
         
     }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "result" { // 替换成你的 segue 标识符
+            if let resultVC = segue.destination as? resultViewController {
+                resultVC.finalScore = finalScore
+                resultVC.wrongAnswerList = wrongAnswerList
+            }
+        }
+    }*/
+    
+    
+
+
     func setupDisplayedData() {
         displayedData.removeAll() // 清空之前的数据
         for item in data {
@@ -75,74 +94,86 @@ class playViewController: UIViewController {
     
     
     @IBAction func readyaction(_ sender: Any) {
-       
-        questionNumber = questionNumber + 1
-        QuestionNumberLabel.text = "\(questionNumber + 1)/10"
-        print("questionNumber: \(questionNumber)")
         
-        pressnumber = 0
-        correct.removeAll()  //下一題時清空correct list
-        
-        if questionNumber < 10
+        if correctOrNot == true
         {
-            if whichGame == "btnfamily"
+            
+            correctOrNot = false
+            questionNumber = questionNumber + 1
+            QuestionNumberLabel.text = "\(questionNumber + 1)/10"
+            print("questionNumber: \(questionNumber)")
+            
+            pressnumber = 0
+            correct.removeAll()  //下一題時清空correct list
+            
+            if questionNumber < 10
             {
-                simpleBluetoothIO.writeValue(value: 52) //char : 4
-                data = realm.objects(elderlyInfo.self).map({ $0 })
-                setupDisplayedData()
-                
-                for i in 1...10{
-                    let number = Int.random(in: 0..<displayedData.count)
-                    Question.append(number)
-                 
-                }
-                //print(displayedData[Question[questionNumber]].name)
-                gamelabel.text = ""
-                QuestionLabel.text = displayedData[Question[questionNumber]].name
-            }
-            else if whichGame == "btnlife"
-            {
-                simpleBluetoothIO.writeValue(value: 52) //char : 4
-                for i in 1...10{
-                    let number = Int.random(in: 0..<2)
-                    Question.append(number)
-                }
-                
-                gamelabel.text = ""
-                QuestionLabel.text = LifeArray[Question[questionNumber]][0]
-                len = LifeArray[Question[questionNumber]].count
-                for item in LifeArray[Question[questionNumber]]
+                if whichGame == "btnfamily"
                 {
-                    print(item)
+                    
+                    simpleBluetoothIO.writeValue(value: 52) //char : 4
+                    data = realm.objects(elderlyInfo.self).map({ $0 })
+                    setupDisplayedData()
+                    
+                    for i in 1...10{
+                        let number = Int.random(in: 0..<displayedData.count)
+                        Question.append(number)
+                        
+                    }
+                    //print(displayedData[Question[questionNumber]].name)
+                    gamelabel.text = ""
+                    QuestionLabel.text = displayedData[Question[questionNumber]].name
                 }
+                else if whichGame == "btnlife"
+                {
+                    simpleBluetoothIO.writeValue(value: 52) //char : 4
+                    for i in 1...10{
+                        let number = Int.random(in: 0..<2)
+                        Question.append(number)
+                    }
+                    
+                    gamelabel.text = ""
+                    QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                    len = LifeArray[Question[questionNumber]].count
+                    for item in LifeArray[Question[questionNumber]]
+                    {
+                        print(item)
+                    }
+                }
+                else
+                {
+                    simpleBluetoothIO.writeValue(value: 51) //char : 3
+                    
+                    for i in 1...10{
+                        let number = Int.random(in: 1..<10)
+                        Question.append(number)
+                    }
+                    gamelabel.text = ""
+                    QuestionLabel.text = "請按\(Question[questionNumber])下"
+                }
+                
+                readybutton.setTitle("下一題", for: .normal)
+            }
+            else if questionNumber == 10
+            {
+                readybutton.setTitle("結束", for: .normal)
+                QuestionLabel.text = ""
+                QuestionNumberLabel.text = ""
+                gamelabel.text = "恭喜完成了！"
+                playSound(SoundNane: "恭喜完成")
+                correctOrNot = true
+                
             }
             else
             {
-                simpleBluetoothIO.writeValue(value: 51) //char : 3
+                simpleBluetoothIO.writeValue(value: 53) //char : 5
                 
-                for i in 1...10{
-                    let number = Int.random(in: 1..<10)
-                    Question.append(number)
-                }
-                gamelabel.text = ""
-                QuestionLabel.text = "請按\(Question[questionNumber])下"
+                if let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "result") as? resultViewController {
+                        // 使用导航控制器来切换到 resultViewController
+                        self.navigationController?.pushViewController(resultVC, animated: true)
+                    }
+                
             }
-            
-            readybutton.setTitle("下一題", for: .normal)
-        }
-        else if questionNumber >= 10
-        {
-            readybutton.setTitle("結束", for: .normal)
-            QuestionLabel.text = ""
-            QuestionNumberLabel.text = ""
-            gamelabel.text = "恭喜完成了！"
-            playSound(SoundNane: "恭喜完成")
-            
-        }
-        else
-        {
-            simpleBluetoothIO.writeValue(value: 53) //char : 5
-            
         }
         
       
@@ -187,7 +218,7 @@ extension playViewController: SimpleBluetoothIODelegate {
         
         
         //還沒按readybutton就感應會出錯
-        if whichGame == "btnfamily"
+        if whichGame == "btnfamily"//家人遊戲
         {
            
             //let family2 = realm.objects(elderlyInfo.self).map({ $0 })
@@ -211,6 +242,7 @@ extension playViewController: SimpleBluetoothIODelegate {
                 print("displayedData[Random[questionNumber]].nfctag:\(displayedData[Question[questionNumber]].nfctag)")
                 if(str2 == displayedData[Question[questionNumber]].nfctag)
                 {
+                    correctOrNot = true
                     gamelabel.text = "答對了🥳"
                     playSound(SoundNane: "答對了～很棒欸")
                     simpleBluetoothIO.writeValue(value: 50)
@@ -218,14 +250,18 @@ extension playViewController: SimpleBluetoothIODelegate {
                 }
                 else
                 {
+                    correctOrNot = false
                     gamelabel.text = "答錯了🥹"
                     playSound(SoundNane: "答錯了～再試試看")
                     //simpleBluetoothIO.writeValue(value: 77)
+                    wrongAnswerList.append(displayedData[Question[questionNumber]].name)
+                    
+                    finalScore = finalScore - 10
                 }
                 
             }
         }
-        else if(whichGame == "btnlife")
+        else if(whichGame == "btnlife")//生活遊戲
         {
             
             let strValue = String(value)
@@ -242,85 +278,110 @@ extension playViewController: SimpleBluetoothIODelegate {
                 playarray.removeAll()///change
                 print("str2:\(str2)")
                 
-                var match = false
-                for item in LifeArray[Question[questionNumber]]
+                
+                if correct.count<3
                 {
                     
-                    if str2 == item
+                    
+                    var match = false
+                    for item in LifeArray[Question[questionNumber]]
                     {
-                        match = true
-                        print(correct)
-                        if correct.count == 0
+                        
+                        if str2 == item
                         {
-                            correct.append(item)
-                            print("答對了，還有嗎")
-                            gamelabel.text = "答對了，還有嗎"
-                            playSound(SoundNane: "答對了～還有嗎")
-                            simpleBluetoothIO.writeValue(value: 50)
-                            
-                            QuestionLabel.text = LifeArray[Question[questionNumber]][0]
-                        }
-                        else if correct.count >= 3
-                        {
-                            print("全對了，請下一題")
-                            gamelabel.text = "全對了，請下一題"
-                            playSound(SoundNane: "全對")
-                            simpleBluetoothIO.writeValue(value: 50)
-                            QuestionLabel.text = LifeArray[Question[questionNumber]][0]
-                        }
-                        else
-                        {
-                            for i in 0...correct.count-1
+                            match = true
+                            print(correct)
+                            if correct.count == 0
                             {
-                                if(item == correct[i])
+                                correctOrNot = false
+                                correct.append(item)
+                                print("答對了，還有嗎")
+                                gamelabel.text = "答對了，還有嗎"
+                                playSound(SoundNane: "答對了～還有嗎")
+                                simpleBluetoothIO.writeValue(value: 50)
+                                
+                                QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                            }
+                            /*
+                             else if correct.count >= 3
+                             {
+                             correctOrNot = true
+                             print("全對了，請下一題")
+                             gamelabel.text = "全對了，請下一題"
+                             playSound(SoundNane: "全對")
+                             simpleBluetoothIO.writeValue(value: 50)
+                             QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                             }*/
+                            else
+                            {
+                                for i in 0...correct.count-1
                                 {
-                                    print("重複摟，還有嗎")
-                                    gamelabel.text = "重複摟，還有嗎"
-                                    playSound(SoundNane: "重複")
-                                    simpleBluetoothIO.writeValue(value: 50)
-                                    QuestionLabel.text = LifeArray[Question[questionNumber]][0]
-                                    break
-                                }
-                                else if (i == correct.count-1)
-                                {
-                                    correct.append(item)
-                                    if correct.count == 3
+                                    if(item == correct[i])
                                     {
-                                        print("全對了，請下一題")
-                                        gamelabel.text = "全對了，請下一題"
-                                        playSound(SoundNane: "全對")
+                                        correctOrNot = false
+                                        print("重複摟，還有嗎")
+                                        gamelabel.text = "重複摟，還有嗎"
+                                        playSound(SoundNane: "重複")
                                         simpleBluetoothIO.writeValue(value: 50)
                                         QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                                        break
                                     }
-                                    else
+                                    else if (i == correct.count-1)
                                     {
-                                        print("答對了，還有嗎")
-                                        gamelabel.text = "答對了，還有嗎"
-                                        playSound(SoundNane: "答對了～還有嗎")
-                                        simpleBluetoothIO.writeValue(value: 50)
-                                        QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                                        correct.append(item)
+                                        if correct.count == 3
+                                        {
+                                            correctOrNot = true
+                                            print("全對了，請下一題")
+                                            gamelabel.text = "全對了，請下一題"
+                                            playSound(SoundNane: "全對")
+                                            simpleBluetoothIO.writeValue(value: 50)
+                                            QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                                        }
+                                        else
+                                        {
+                                            correctOrNot = false
+                                            print("答對了，還有嗎")
+                                            gamelabel.text = "答對了，還有嗎"
+                                            playSound(SoundNane: "答對了～還有嗎")
+                                            simpleBluetoothIO.writeValue(value: 50)
+                                            QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                                        }
+                                        
                                     }
-                                    
                                 }
+                                
                             }
                             
                         }
-                 
+                        
                     }
-                    
+                    if match == false //correct list 都比對過後，沒有match才會跑到這裡
+                    {
+                        correctOrNot = false
+                        print("答錯了，再試試看")
+                        gamelabel.text = "答錯了，再試試看"
+                        playSound(SoundNane: "答錯了～再試試看")
+                        QuestionLabel.text = LifeArray[Question[questionNumber]][0]
+                        wrongAnswerList.append(LifeArray[Question[questionNumber]][0])
+                        print(wrongAnswerList)
+                        finalScore = finalScore - 10
+                    }
                 }
-                if match == false
+                else//已經答對了，繼續感應tag只會顯示全對
                 {
-                    print("答錯了，再試試看")
-                    gamelabel.text = "答錯了，再試試看"
-                    playSound(SoundNane: "答錯了～再試試看")
+                    correctOrNot = true
+                    print("全對了，請下一題")
+                    gamelabel.text = "全對了，請下一題"
+                    playSound(SoundNane: "全對")
+                    simpleBluetoothIO.writeValue(value: 50)
                     QuestionLabel.text = LifeArray[Question[questionNumber]][0]
                 }
                 
             }
             
         }
-        else
+        else//數字遊戲
         {
             
             print(value)
@@ -328,23 +389,26 @@ extension playViewController: SimpleBluetoothIODelegate {
             if(String(value) == "1")
             {
                 pressnumber = pressnumber + 1
-                if pressnumber != Question[questionNumber]
+                if pressnumber < Question[questionNumber]
                 {
+                    correctOrNot = false
                     playSound(SoundNane: "\(pressnumber)")
                 }
                 
                 gamelabel.text = String(pressnumber)
                 if pressnumber == Question[questionNumber]
                 {
+                    correctOrNot = true
                     gamelabel.text = "答對了🥳"
                     playSound(SoundNane: "答對了～很棒欸")
                     simpleBluetoothIO.writeValue(value: 50)
                 }
                 else if pressnumber > Question[questionNumber]
                 {
+                    correctOrNot = true
                     gamelabel.text = "全對了，請下一題"
                     playSound(SoundNane: "全對")
-                    simpleBluetoothIO.writeValue(value: 50)
+                    //simpleBluetoothIO.writeValue(value: 50)
                 }
             }
             //gamelabel.text = String(value)

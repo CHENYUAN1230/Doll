@@ -9,18 +9,6 @@ import UIKit
 import RealmSwift
 
 
-/* elderlyInfo: Object {
-    @objc dynamic var item: String = ""
-    @objc dynamic var nfctag: String = ""
-}*/
-
-/*
-class familymember {
-    static let shared = familymember()
-    var family = [Int]()
-    
-    private init(){}
-}*/
 
 class CareViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     

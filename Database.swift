@@ -26,3 +26,12 @@ class elderlyInfo: Object {
 }
 
 
+class record: Object{
+    @objc dynamic var gameType = ""
+    @objc dynamic var recordUser = ""
+    @objc dynamic var score = ""
+    @objc dynamic var wrongAnswer = ""
+    @objc dynamic var time = ""
+}//尚未修改資料庫
+
+

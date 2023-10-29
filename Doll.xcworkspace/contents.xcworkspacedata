@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../Downloads/&#x97f3;&#x6a94;">
+      location = "group:../../Desktop/&#x97f3;&#x6a94;">
    </FileRef>
    <FileRef
       location = "group:Doll.xcodeproj">

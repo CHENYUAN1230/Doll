@@ -10,22 +10,22 @@
 		1D718351B983FEDCC24EAA43 /* Pods_Doll_DollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCE80821AC97A4FA49D1464 /* Pods_Doll_DollUITests.framework */; };
 		6DFE53EB18123ED5A13959E1 /* Pods_Doll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3669785262C9D3378B3547 /* Pods_Doll.framework */; };
 		B5023EB72AC6C81F00CA5F3B /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5023EB62AC6C81F00CA5F3B /* GameData.swift */; };
-		B507F7F42AD8E9F200CC4847 /* 全對.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7E42AD8E9F100CC4847 /* 全對.m4a */; };
-		B507F7F52AD8E9F200CC4847 /* 4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7E52AD8E9F100CC4847 /* 4.m4a */; };
-		B507F7F62AD8E9F200CC4847 /* 9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7E62AD8E9F100CC4847 /* 9.m4a */; };
-		B507F7F72AD8E9F200CC4847 /* 10.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7E72AD8E9F100CC4847 /* 10.m4a */; };
-		B507F7F82AD8E9F200CC4847 /* 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7E82AD8E9F100CC4847 /* 2.m4a */; };
-		B507F7F92AD8E9F200CC4847 /* 8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7E92AD8E9F100CC4847 /* 8.m4a */; };
-		B507F7FA2AD8E9F200CC4847 /* 恭喜完成.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7EA2AD8E9F100CC4847 /* 恭喜完成.m4a */; };
-		B507F7FB2AD8E9F200CC4847 /* 答對了～很棒欸.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7EB2AD8E9F100CC4847 /* 答對了～很棒欸.m4a */; };
-		B507F7FC2AD8E9F200CC4847 /* 答對了～還有嗎.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7EC2AD8E9F100CC4847 /* 答對了～還有嗎.m4a */; };
-		B507F7FD2AD8E9F200CC4847 /* 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7ED2AD8E9F100CC4847 /* 1.m4a */; };
-		B507F7FE2AD8E9F200CC4847 /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7EE2AD8E9F100CC4847 /* 7.m4a */; };
-		B507F7FF2AD8E9F200CC4847 /* 5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7EF2AD8E9F100CC4847 /* 5.m4a */; };
-		B507F8002AD8E9F200CC4847 /* 重複.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7F02AD8E9F100CC4847 /* 重複.m4a */; };
-		B507F8012AD8E9F200CC4847 /* 6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7F12AD8E9F200CC4847 /* 6.m4a */; };
-		B507F8022AD8E9F200CC4847 /* 答錯了～再試試看.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7F22AD8E9F200CC4847 /* 答錯了～再試試看.m4a */; };
-		B507F8032AD8E9F200CC4847 /* 3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B507F7F32AD8E9F200CC4847 /* 3.m4a */; };
+		B51A62322AED02EF00EDD0FD /* 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62222AED02EE00EDD0FD /* 2.m4a */; };
+		B51A62332AED02EF00EDD0FD /* 9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62232AED02EE00EDD0FD /* 9.m4a */; };
+		B51A62342AED02EF00EDD0FD /* 3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62242AED02EE00EDD0FD /* 3.m4a */; };
+		B51A62352AED02EF00EDD0FD /* 8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62252AED02EE00EDD0FD /* 8.m4a */; };
+		B51A62362AED02EF00EDD0FD /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62262AED02EE00EDD0FD /* 7.m4a */; };
+		B51A62372AED02EF00EDD0FD /* 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62272AED02EE00EDD0FD /* 1.m4a */; };
+		B51A62382AED02EF00EDD0FD /* 答對了～還有嗎.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62282AED02EE00EDD0FD /* 答對了～還有嗎.m4a */; };
+		B51A62392AED02EF00EDD0FD /* 6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62292AED02EF00EDD0FD /* 6.m4a */; };
+		B51A623A2AED02EF00EDD0FD /* 恭喜完成.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A622A2AED02EF00EDD0FD /* 恭喜完成.m4a */; };
+		B51A623B2AED02EF00EDD0FD /* 答錯了～再試試看.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A622B2AED02EF00EDD0FD /* 答錯了～再試試看.m4a */; };
+		B51A623C2AED02EF00EDD0FD /* 重複.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A622C2AED02EF00EDD0FD /* 重複.m4a */; };
+		B51A623D2AED02EF00EDD0FD /* 10.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A622D2AED02EF00EDD0FD /* 10.m4a */; };
+		B51A623E2AED02EF00EDD0FD /* 答對了～很棒欸.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A622E2AED02EF00EDD0FD /* 答對了～很棒欸.m4a */; };
+		B51A623F2AED02EF00EDD0FD /* 4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A622F2AED02EF00EDD0FD /* 4.m4a */; };
+		B51A62402AED02EF00EDD0FD /* 全對.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62302AED02EF00EDD0FD /* 全對.m4a */; };
+		B51A62412AED02EF00EDD0FD /* 5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51A62312AED02EF00EDD0FD /* 5.m4a */; };
 		B51F3D112AC544E100A936BE /* UIImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F3D102AC544E000A936BE /* UIImageResize.swift */; };
 		B56BEFD02A9F126F003B32E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FF5C6D2A8F5B320084B0C4 /* Main.storyboard */; };
 		B56BEFD12A9F1274003B32E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FF5C752A8F5B340084B0C4 /* LaunchScreen.storyboard */; };
@@ -46,11 +46,9 @@
 		B5CA68862ABC6EA10096AB9B /* totalUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA68852ABC6EA10096AB9B /* totalUserViewController.swift */; };
 		B5CA68882ABC782D0096AB9B /* singleUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA68872ABC782D0096AB9B /* singleUserViewController.swift */; };
 		B5CA688A2ABC98500096AB9B /* addNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA68892ABC98500096AB9B /* addNewUserViewController.swift */; };
-		B5D476922AC9AB3000CD22BA /* 全對了，請下一題.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B5D4768D2AC9AB3000CD22BA /* 全對了，請下一題.m4a */; };
-		B5D476932AC9AB3000CD22BA /* 恭喜完成了.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B5D4768E2AC9AB3000CD22BA /* 恭喜完成了.m4a */; };
-		B5D476942AC9AB3000CD22BA /* 答對了，還有嗎.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B5D4768F2AC9AB3000CD22BA /* 答對了，還有嗎.m4a */; };
-		B5D476952AC9AB3000CD22BA /* 重複嘍，還有嗎.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B5D476902AC9AB3000CD22BA /* 重複嘍，還有嗎.m4a */; };
-		B5D476962AC9AB3000CD22BA /* 答錯了，再試試看.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B5D476912AC9AB3000CD22BA /* 答錯了，再試試看.m4a */; };
+		B5D8F2A82AEE11990035738F /* AnsSituationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8F2A72AEE11990035738F /* AnsSituationViewController.swift */; };
+		B5D8F2AA2AEE45500035738F /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8F2A92AEE45500035738F /* resultViewController.swift */; };
+		B5D8F2AC2AEEA3B90035738F /* AnswerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D8F2AB2AEEA3B90035738F /* AnswerTableViewController.swift */; };
 		D737D6FD0DE07CBC06B4D829 /* Pods_DollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6F856E0318AABDDAA3BF4 /* Pods_DollTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,22 +78,22 @@
 		5CCE80821AC97A4FA49D1464 /* Pods_Doll_DollUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doll_DollUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7354C24A662033BA360BFFB9 /* Pods-Doll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doll.release.xcconfig"; path = "Target Support Files/Pods-Doll/Pods-Doll.release.xcconfig"; sourceTree = "<group>"; };
 		B5023EB62AC6C81F00CA5F3B /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
-		B507F7E42AD8E9F100CC4847 /* 全對.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "全對.m4a"; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/全對.m4a"; sourceTree = "<group>"; };
-		B507F7E52AD8E9F100CC4847 /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 4.m4a; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/4.m4a"; sourceTree = "<group>"; };
-		B507F7E62AD8E9F100CC4847 /* 9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 9.m4a; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/9.m4a"; sourceTree = "<group>"; };
-		B507F7E72AD8E9F100CC4847 /* 10.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 10.m4a; path = ../../../Downloads/10.m4a; sourceTree = "<group>"; };
-		B507F7E82AD8E9F100CC4847 /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.m4a; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/2.m4a"; sourceTree = "<group>"; };
-		B507F7E92AD8E9F100CC4847 /* 8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8.m4a; path = ../../../Downloads/8.m4a; sourceTree = "<group>"; };
-		B507F7EA2AD8E9F100CC4847 /* 恭喜完成.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "恭喜完成.m4a"; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/恭喜完成.m4a"; sourceTree = "<group>"; };
-		B507F7EB2AD8E9F100CC4847 /* 答對了～很棒欸.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "答對了～很棒欸.m4a"; path = "../../../Downloads/答對了～很棒欸.m4a"; sourceTree = "<group>"; };
-		B507F7EC2AD8E9F100CC4847 /* 答對了～還有嗎.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "答對了～還有嗎.m4a"; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/答對了～還有嗎.m4a"; sourceTree = "<group>"; };
-		B507F7ED2AD8E9F100CC4847 /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.m4a; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/1.m4a"; sourceTree = "<group>"; };
-		B507F7EE2AD8E9F100CC4847 /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 7.m4a; path = ../../../Downloads/7.m4a; sourceTree = "<group>"; };
-		B507F7EF2AD8E9F100CC4847 /* 5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 5.m4a; path = ../../../Downloads/5.m4a; sourceTree = "<group>"; };
-		B507F7F02AD8E9F100CC4847 /* 重複.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "重複.m4a"; path = "../../../Downloads/重複.m4a"; sourceTree = "<group>"; };
-		B507F7F12AD8E9F200CC4847 /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 6.m4a; path = ../../../Downloads/6.m4a; sourceTree = "<group>"; };
-		B507F7F22AD8E9F200CC4847 /* 答錯了～再試試看.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "答錯了～再試試看.m4a"; path = "../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/答錯了～再試試看.m4a"; sourceTree = "<group>"; };
-		B507F7F32AD8E9F200CC4847 /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 3.m4a; path = ../../../Downloads/3.m4a; sourceTree = "<group>"; };
+		B51A62222AED02EE00EDD0FD /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.m4a; path = "../../../Desktop/音檔/2.m4a"; sourceTree = "<group>"; };
+		B51A62232AED02EE00EDD0FD /* 9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 9.m4a; path = "../../../Desktop/音檔/9.m4a"; sourceTree = "<group>"; };
+		B51A62242AED02EE00EDD0FD /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 3.m4a; path = "../../../Desktop/音檔/3.m4a"; sourceTree = "<group>"; };
+		B51A62252AED02EE00EDD0FD /* 8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8.m4a; path = "../../../Desktop/音檔/8.m4a"; sourceTree = "<group>"; };
+		B51A62262AED02EE00EDD0FD /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 7.m4a; path = "../../../Desktop/音檔/7.m4a"; sourceTree = "<group>"; };
+		B51A62272AED02EE00EDD0FD /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.m4a; path = "../../../Desktop/音檔/1.m4a"; sourceTree = "<group>"; };
+		B51A62282AED02EE00EDD0FD /* 答對了～還有嗎.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "答對了～還有嗎.m4a"; path = "../../../Desktop/音檔/答對了～還有嗎.m4a"; sourceTree = "<group>"; };
+		B51A62292AED02EF00EDD0FD /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 6.m4a; path = "../../../Desktop/音檔/6.m4a"; sourceTree = "<group>"; };
+		B51A622A2AED02EF00EDD0FD /* 恭喜完成.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "恭喜完成.m4a"; path = "../../../Desktop/音檔/恭喜完成.m4a"; sourceTree = "<group>"; };
+		B51A622B2AED02EF00EDD0FD /* 答錯了～再試試看.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "答錯了～再試試看.m4a"; path = "../../../Desktop/音檔/答錯了～再試試看.m4a"; sourceTree = "<group>"; };
+		B51A622C2AED02EF00EDD0FD /* 重複.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "重複.m4a"; path = "../../../Desktop/音檔/重複.m4a"; sourceTree = "<group>"; };
+		B51A622D2AED02EF00EDD0FD /* 10.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 10.m4a; path = "../../../Desktop/音檔/10.m4a"; sourceTree = "<group>"; };
+		B51A622E2AED02EF00EDD0FD /* 答對了～很棒欸.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "答對了～很棒欸.m4a"; path = "../../../Desktop/音檔/答對了～很棒欸.m4a"; sourceTree = "<group>"; };
+		B51A622F2AED02EF00EDD0FD /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 4.m4a; path = "../../../Desktop/音檔/4.m4a"; sourceTree = "<group>"; };
+		B51A62302AED02EF00EDD0FD /* 全對.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "全對.m4a"; path = "../../../Desktop/音檔/全對.m4a"; sourceTree = "<group>"; };
+		B51A62312AED02EF00EDD0FD /* 5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 5.m4a; path = "../../../Desktop/音檔/5.m4a"; sourceTree = "<group>"; };
 		B51F3D102AC544E000A936BE /* UIImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageResize.swift; sourceTree = SOURCE_ROOT; };
 		B536A6852A9EE42B00B09310 /* Doll */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Doll; sourceTree = "<group>"; };
 		B5A12FCE2A9F3316002E5BE1 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
@@ -109,11 +107,9 @@
 		B5CA68852ABC6EA10096AB9B /* totalUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalUserViewController.swift; sourceTree = SOURCE_ROOT; };
 		B5CA68872ABC782D0096AB9B /* singleUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleUserViewController.swift; sourceTree = SOURCE_ROOT; };
 		B5CA68892ABC98500096AB9B /* addNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addNewUserViewController.swift; path = Pods/addNewUserViewController.swift; sourceTree = SOURCE_ROOT; };
-		B5D4768D2AC9AB3000CD22BA /* 全對了，請下一題.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; name = "全對了，請下一題.m4a"; path = "../../../Downloads/音檔/全對了，請下一題.m4a"; sourceTree = "<group>"; };
-		B5D4768E2AC9AB3000CD22BA /* 恭喜完成了.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; name = "恭喜完成了.m4a"; path = "../../../Downloads/音檔/恭喜完成了.m4a"; sourceTree = "<group>"; };
-		B5D4768F2AC9AB3000CD22BA /* 答對了，還有嗎.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; name = "答對了，還有嗎.m4a"; path = "../../../Downloads/音檔/答對了，還有嗎.m4a"; sourceTree = "<group>"; };
-		B5D476902AC9AB3000CD22BA /* 重複嘍，還有嗎.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; name = "重複嘍，還有嗎.m4a"; path = "../../../Downloads/音檔/重複嘍，還有嗎.m4a"; sourceTree = "<group>"; };
-		B5D476912AC9AB3000CD22BA /* 答錯了，再試試看.m4a */ = {isa = PBXFileReference; lastKnownFileType = text; name = "答錯了，再試試看.m4a"; path = "../../../Downloads/音檔/答錯了，再試試看.m4a"; sourceTree = "<group>"; };
+		B5D8F2A72AEE11990035738F /* AnsSituationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsSituationViewController.swift; sourceTree = "<group>"; };
+		B5D8F2A92AEE45500035738F /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = SOURCE_ROOT; };
+		B5D8F2AB2AEEA3B90035738F /* AnswerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewController.swift; sourceTree = "<group>"; };
 		B5FF5C642A8F5B310084B0C4 /* Doll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FF5C672A8F5B310084B0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FF5C692A8F5B320084B0C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +201,7 @@
 		B5FF5C662A8F5B310084B0C4 /* Doll */ = {
 			isa = PBXGroup;
 			children = (
+				B5D8F2A92AEE45500035738F /* resultViewController.swift */,
 				B51F3D102AC544E000A936BE /* UIImageResize.swift */,
 				B5CA68892ABC98500096AB9B /* addNewUserViewController.swift */,
 				B5CA68872ABC782D0096AB9B /* singleUserViewController.swift */,
@@ -221,29 +218,26 @@
 				B5FF5C6B2A8F5B320084B0C4 /* ViewController.swift */,
 				B5A12FD22A9F3327002E5BE1 /* NSData+int8.swift */,
 				B5FF5C6D2A8F5B320084B0C4 /* Main.storyboard */,
+				B5D8F2A72AEE11990035738F /* AnsSituationViewController.swift */,
+				B5D8F2AB2AEEA3B90035738F /* AnswerTableViewController.swift */,
 				B5FF5CA42A9D94570084B0C4 /* SasinaViewController.swift */,
 				B5FF5C732A8F5B340084B0C4 /* Assets.xcassets */,
-				B5D4768D2AC9AB3000CD22BA /* 全對了，請下一題.m4a */,
-				B507F7ED2AD8E9F100CC4847 /* 1.m4a */,
-				B507F7E82AD8E9F100CC4847 /* 2.m4a */,
-				B507F7F32AD8E9F200CC4847 /* 3.m4a */,
-				B507F7E52AD8E9F100CC4847 /* 4.m4a */,
-				B507F7EF2AD8E9F100CC4847 /* 5.m4a */,
-				B507F7F12AD8E9F200CC4847 /* 6.m4a */,
-				B507F7EE2AD8E9F100CC4847 /* 7.m4a */,
-				B507F7E92AD8E9F100CC4847 /* 8.m4a */,
-				B507F7E62AD8E9F100CC4847 /* 9.m4a */,
-				B507F7E72AD8E9F100CC4847 /* 10.m4a */,
-				B507F7E42AD8E9F100CC4847 /* 全對.m4a */,
-				B507F7F02AD8E9F100CC4847 /* 重複.m4a */,
-				B507F7EA2AD8E9F100CC4847 /* 恭喜完成.m4a */,
-				B507F7EB2AD8E9F100CC4847 /* 答對了～很棒欸.m4a */,
-				B507F7EC2AD8E9F100CC4847 /* 答對了～還有嗎.m4a */,
-				B507F7F22AD8E9F200CC4847 /* 答錯了～再試試看.m4a */,
-				B5D476902AC9AB3000CD22BA /* 重複嘍，還有嗎.m4a */,
-				B5D4768E2AC9AB3000CD22BA /* 恭喜完成了.m4a */,
-				B5D4768F2AC9AB3000CD22BA /* 答對了，還有嗎.m4a */,
-				B5D476912AC9AB3000CD22BA /* 答錯了，再試試看.m4a */,
+				B51A62272AED02EE00EDD0FD /* 1.m4a */,
+				B51A62222AED02EE00EDD0FD /* 2.m4a */,
+				B51A62242AED02EE00EDD0FD /* 3.m4a */,
+				B51A622F2AED02EF00EDD0FD /* 4.m4a */,
+				B51A62312AED02EF00EDD0FD /* 5.m4a */,
+				B51A62292AED02EF00EDD0FD /* 6.m4a */,
+				B51A62262AED02EE00EDD0FD /* 7.m4a */,
+				B51A62252AED02EE00EDD0FD /* 8.m4a */,
+				B51A62232AED02EE00EDD0FD /* 9.m4a */,
+				B51A622D2AED02EF00EDD0FD /* 10.m4a */,
+				B51A62302AED02EF00EDD0FD /* 全對.m4a */,
+				B51A622C2AED02EF00EDD0FD /* 重複.m4a */,
+				B51A622A2AED02EF00EDD0FD /* 恭喜完成.m4a */,
+				B51A622E2AED02EF00EDD0FD /* 答對了～很棒欸.m4a */,
+				B51A62282AED02EE00EDD0FD /* 答對了～還有嗎.m4a */,
+				B51A622B2AED02EF00EDD0FD /* 答錯了～再試試看.m4a */,
 				B5FF5C752A8F5B340084B0C4 /* LaunchScreen.storyboard */,
 				B5FF5C782A8F5B340084B0C4 /* Info.plist */,
 				B5FF5C702A8F5B320084B0C4 /* Doll.xcdatamodeld */,
@@ -361,30 +355,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B507F8032AD8E9F200CC4847 /* 3.m4a in Resources */,
-				B507F7F62AD8E9F200CC4847 /* 9.m4a in Resources */,
-				B5D476922AC9AB3000CD22BA /* 全對了，請下一題.m4a in Resources */,
-				B507F7FE2AD8E9F200CC4847 /* 7.m4a in Resources */,
-				B507F7FB2AD8E9F200CC4847 /* 答對了～很棒欸.m4a in Resources */,
-				B507F7F52AD8E9F200CC4847 /* 4.m4a in Resources */,
-				B507F8022AD8E9F200CC4847 /* 答錯了～再試試看.m4a in Resources */,
+				B51A62392AED02EF00EDD0FD /* 6.m4a in Resources */,
+				B51A62342AED02EF00EDD0FD /* 3.m4a in Resources */,
+				B51A623F2AED02EF00EDD0FD /* 4.m4a in Resources */,
+				B51A62402AED02EF00EDD0FD /* 全對.m4a in Resources */,
+				B51A623E2AED02EF00EDD0FD /* 答對了～很棒欸.m4a in Resources */,
+				B51A62412AED02EF00EDD0FD /* 5.m4a in Resources */,
 				B56BEFD22A9F127E003B32E1 /* Assets.xcassets in Resources */,
-				B5D476932AC9AB3000CD22BA /* 恭喜完成了.m4a in Resources */,
-				B507F7FD2AD8E9F200CC4847 /* 1.m4a in Resources */,
-				B507F7FC2AD8E9F200CC4847 /* 答對了～還有嗎.m4a in Resources */,
-				B507F7F42AD8E9F200CC4847 /* 全對.m4a in Resources */,
-				B5D476952AC9AB3000CD22BA /* 重複嘍，還有嗎.m4a in Resources */,
-				B507F8012AD8E9F200CC4847 /* 6.m4a in Resources */,
-				B507F7F72AD8E9F200CC4847 /* 10.m4a in Resources */,
-				B5D476962AC9AB3000CD22BA /* 答錯了，再試試看.m4a in Resources */,
+				B51A62332AED02EF00EDD0FD /* 9.m4a in Resources */,
 				B56BEFD12A9F1274003B32E1 /* LaunchScreen.storyboard in Resources */,
-				B507F7FF2AD8E9F200CC4847 /* 5.m4a in Resources */,
-				B507F8002AD8E9F200CC4847 /* 重複.m4a in Resources */,
-				B5D476942AC9AB3000CD22BA /* 答對了，還有嗎.m4a in Resources */,
-				B507F7FA2AD8E9F200CC4847 /* 恭喜完成.m4a in Resources */,
+				B51A623A2AED02EF00EDD0FD /* 恭喜完成.m4a in Resources */,
+				B51A62362AED02EF00EDD0FD /* 7.m4a in Resources */,
+				B51A62382AED02EF00EDD0FD /* 答對了～還有嗎.m4a in Resources */,
+				B51A623C2AED02EF00EDD0FD /* 重複.m4a in Resources */,
+				B51A623B2AED02EF00EDD0FD /* 答錯了～再試試看.m4a in Resources */,
+				B51A623D2AED02EF00EDD0FD /* 10.m4a in Resources */,
 				B56BEFD02A9F126F003B32E1 /* Main.storyboard in Resources */,
-				B507F7F82AD8E9F200CC4847 /* 2.m4a in Resources */,
-				B507F7F92AD8E9F200CC4847 /* 8.m4a in Resources */,
+				B51A62372AED02EF00EDD0FD /* 1.m4a in Resources */,
+				B51A62322AED02EF00EDD0FD /* 2.m4a in Resources */,
+				B51A62352AED02EF00EDD0FD /* 8.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,12 +509,15 @@
 				B5A12FDC2A9F3388002E5BE1 /* AppDelegate.swift in Sources */,
 				B5A12FDF2A9F3388002E5BE1 /* playViewController.swift in Sources */,
 				B5023EB72AC6C81F00CA5F3B /* GameData.swift in Sources */,
+				B5D8F2AC2AEEA3B90035738F /* AnswerTableViewController.swift in Sources */,
+				B5D8F2A82AEE11990035738F /* AnsSituationViewController.swift in Sources */,
 				B5A12FE02A9F3388002E5BE1 /* SimpleBluetoothIO.swift in Sources */,
 				B5A12FE12A9F3388002E5BE1 /* AddUserViewController.swift in Sources */,
 				B5A12FE22A9F3388002E5BE1 /* SceneDelegate.swift in Sources */,
 				B5CA688A2ABC98500096AB9B /* addNewUserViewController.swift in Sources */,
 				B51F3D112AC544E100A936BE /* UIImageResize.swift in Sources */,
 				B5A12FE42A9F3388002E5BE1 /* NSData+int8.swift in Sources */,
+				B5D8F2AA2AEE45500035738F /* resultViewController.swift in Sources */,
 				B5A12FE52A9F3388002E5BE1 /* SasinaViewController.swift in Sources */,
 				B5CA68842ABC40450096AB9B /* Database.swift in Sources */,
 				B5CA68862ABC6EA10096AB9B /* totalUserViewController.swift in Sources */,
