@@ -24,6 +24,7 @@ const int servoPin = 4;
 
 //button
 int buttonright= 13;
+int buttonCount = 0;
 bool numbergame = false;
 
 //NFC reader設定
@@ -57,6 +58,7 @@ class MyCallbacks: public BLECharacteristicCallbacks {
         if(atoi(value.c_str())==2)
         {
           Serial.println("設成高角位");
+          buttonCount = 0;
           servoMotor.attach(4);
           servoMotor2.attach(14);
           for (int angle = 0; angle <= 180; angle++) {
@@ -79,15 +81,18 @@ class MyCallbacks: public BLECharacteristicCallbacks {
         else if(atoi(value.c_str())==3)
         {
           numbergame = true;
+          Serial.println("switch to numbergame");
         }
         else if(atoi(value.c_str())==4)
         {
           nfcgame = true;
+          Serial.println("switch to nfcgame");
         }
         else if(atoi(value.c_str())==5)
         {
           nfcgame = false;
           numbergame = false;
+          Serial.println("switch to nfcgame");
         }
 
 
@@ -97,6 +102,7 @@ class MyCallbacks: public BLECharacteristicCallbacks {
 
 void setup() {
   Serial.begin(115200);
+  
   //pinMode(LED_PIN,OUTPUT);
   //digitalWrite(LED_PIN,LOW);
   Serial.println("1- Download and install an BLE scanner app in your phone");
@@ -171,6 +177,9 @@ int prevVal = LOW;
 int buttonState = HIGH;
 int lastbuttonState = HIGH;
 
+int touchState = 55;
+int lasttouchState = 55; 
+
 void loop() {
   //buttonState = digitalRead(buttonPin);
   //Serial.println(buttonState);
@@ -179,7 +188,8 @@ void loop() {
   boolean success;
   uint8_t uid[] = { 0, 0, 0, 0, 0, 0, 0 };  // Buffer to store the returned UID
   uint8_t uidLength;    
-  if(touchRead(T1)>0)
+  touchState = touchRead(32);
+  if(lasttouchState - touchState >= 5)
   {
     servoMotor.attach(4);
     servoMotor2.attach(14);
@@ -214,7 +224,7 @@ void loop() {
     servoMotor.detach();
     servoMotor2.detach();
   }
-  
+  lasttouchState = touchState;
   // print out the state of the button:
   
   //Serial.print("numbergame:");
@@ -224,11 +234,14 @@ void loop() {
   if(numbergame == true)
   {
     buttonState = digitalRead(buttonright);
-    Serial.println(buttonState);
+    //Serial.println(buttonState);
     if(buttonState == LOW && lastbuttonState == HIGH)
     {
+      
+      //Serial.println(1);
       int value = 1;
-      Serial.println(1);
+      buttonCount = buttonCount + 1;
+      Serial.println(buttonCount);
       pCharacteristic->setValue(value);
       pCharacteristic->notify();
       pServer->disconnect(pServer->getConnectedCount());
@@ -237,6 +250,8 @@ void loop() {
       
     }
     lastbuttonState = buttonState;
+    delay(1);
+    
   }
   else if(nfcgame == true)//nfcgame變false之後,還是會等一陣子
   {
@@ -251,16 +266,17 @@ void loop() {
         pCharacteristic->setValue((uint8_t*)&uid[i], 4);
         pCharacteristic->notify();
       }
-      
       pServer->disconnect(pServer->getConnectedCount());
       BLEAdvertising *pAdvertising = pServer->getAdvertising();
       pAdvertising->start();
-      
+     
       //pCharacteristic->setValue((uint8_t*)&uid[], 4);
       Serial.println("");
       // Wait 1 second before continuing
       //delay(1000);
     }
+   
+      
   
   }
   
